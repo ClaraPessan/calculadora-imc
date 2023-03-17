@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Calculadora</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/componentes/cabecalho/cabecalho.css">
+        <link rel="stylesheet" href="css/componentes/formulario/formulario.css">
+        <link rel="stylesheet" href="css/componentes/botoes/botao.css">
+        <link rel="stylesheet" href="css/componentes/cartao/cartao.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    </head>
+
+    <body>
+        <header class="cabecalho">
+            <div class="cabecalho__container">
+                <h1 class=cabecalho__titulo>CALCULADORA <span>IMC</span></h1>
+                <div class="container">
+                    <input type="checkbox" id="menu" class="container__botao">
+                    <label for="menu" class="container__rotulo">
+                        <span class="material-symbols-outlined">menu</span>
+                    </label>
+                    <ul class="lista-menu">
+                        <li class="lista-menu__item">
+                            <a href="imc.html" class="lista-menu__link">IMC</a>
+                        </li>
+                        <li class="lista-menu__item">
+                            <a href="tabela-pesos.html" class="lista-menu__link">PESOS</a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="cabecalho__opcoes">
+                    <li class="opcoes__item">
+                        <a href="imc.html" class="opcoes__link">IMC</a>
+                    </li>
+                    <li class="opcoes__item">
+                        <a href="tabela-pesos.html" class="opcoes__link">TABELA PESOS</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+            <form class="formulario" id="adiciona-form">
+                <input class="formulario__input" type="text" maxlength="10" name="nome" placeholder="Nome:">
+                <ul class="formulario__informacoes">
+                    <li class="formulario__informacao">
+                        <input class="formulario__input" type="number" maxlength="4" name="altura" placeholder="Altura:">
+                    </li>
+                    <li class="formulario__informacao">
+                        <input class="formulario__input" type="number" maxlength="6" name="peso" placeholder="Peso:">
+                    </li>
+                </ul>
+                <button id="botao-concluir" class="botao">Concluir</button>
+                <h3 id="erros"></h3>
+            </form>
+
+            <section class="cartao">
+                <table class="cartao__tabela">
+                    <thead class="cartao__cabecalho">
+                        <th>Nome</th>
+                        <th>Altura</th>
+                        <th>Peso</th>
+                        <th>Classificação</th>
+                        <th>IMC</th>
+                    </thead>
+                    <tbody id="tabela-pessoas">
+                        <tr class="informacoes">
+                            <td class="info-nome"></td>
+                            <td class="info-altura"></td>
+                            <td class="info-peso"></td>
+                            <td class="info-classificacao"></td>
+                            <td class="info-imc"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </body>
+    <script src="js/form.js"></script>
+    <script src="js/calculaImc.js"></script>
+    <script src="js/classificaImc.js"></script>
+    <script src="js/validacoes.js"></script>
+    <script src="js/criaNovaTabela.js"></script>
+</html>

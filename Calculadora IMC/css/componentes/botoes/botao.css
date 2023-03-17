@@ -1,0 +1,14 @@
+.botao {
+    background-color: rgba(136, 0, 49, 1);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    padding: 10px;
+    font-family: 'Montserrat';
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.botao:hover {
+    background-color: rgb(78, 0, 30)
+}
